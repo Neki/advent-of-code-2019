@@ -25,11 +25,11 @@ fn compute_total_fuel_for_mass(mass: i32) -> i32 {
         return 0
     }
     let fuel = compute_fuel_for_mass(mass);
-    return fuel + compute_total_fuel_for_mass(fuel);
+    fuel + compute_total_fuel_for_mass(fuel)
 }
 
 fn compute_fuel_for_mass(mass: i32) -> i32 {
-    return cmp::max(mass / 3 - 2, 0);
+    cmp::max(mass / 3 - 2, 0)
 }
 
 #[cfg(test)]
